@@ -5,7 +5,7 @@ services:
 # Setup MYSQL container
   mysql:
     image: mysql:8.0
-    container_name: mysql-db
+    container_name: mysql-db-products
     restart: always
     env_file: ./.env
     environment:
@@ -26,7 +26,7 @@ services:
      context: .
      dockerfile: Dockerfile
     #build: ./app
-    container_name: app-node-18
+    container_name: app-node-18-products
     restart: always
     depends_on:
       - mysql

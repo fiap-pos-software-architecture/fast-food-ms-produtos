@@ -5,7 +5,6 @@ import * as logger from 'morgan';
 import 'reflect-metadata';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from '../dist/swagger.json';
-import orderRoute from './adapters/driver/api/routers/orderRoute';
 import productRoute from './adapters/driver/api/routers/productRoute';
 import { AppDataSource } from './data-source';
 
@@ -16,7 +15,7 @@ AppDataSource.initialize()
     app.use(cors.default());
     app.use(bodyParser.json());
     app.use(logger.default('dev'));
-    app.use(express.json(), productRoute, orderRoute);
+    app.use(express.json(), productRoute);
 
     app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

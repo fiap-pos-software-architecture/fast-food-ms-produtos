@@ -15,7 +15,7 @@ RUN npm run build
 ENV MYSQL_USER=jm_user \
     MYSQL_PASSWORD=jm_password \
     MYSQL_DATABASE=tech_challenge_BD \
-    MYSQL_HOST=mysql-db \
+    MYSQL_HOST=mysql-db-products \
     MYSQL_PORT=3306
 
 EXPOSE 3000
