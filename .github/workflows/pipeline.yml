@@ -122,3 +122,4 @@ jobs:
 
           kubectl apply -f kubernetes/Products
           kubectl set image deployment/app-node-18-products app-node-18-products=guilhermelimasoares9/app-node-18-products
+
