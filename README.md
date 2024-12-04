@@ -6,7 +6,7 @@
   <!-- <a href="https://restfullapihexagonalarchitecture.netlify.com">Demo</a> -->
 </div>
 
-<h1 align="center">Restfull Api Hexagonal Architecture</h1>
+<h1 align="center">Microsserviço de Produtos - Restfull Api Hexagonal Architecture</h1>
 
 <p align="center">
   <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/jennyffermorais/restfull-api-hexagonal-architecture?color=56BEB8">
@@ -46,21 +46,15 @@
 
 ## :dart: Sobre ##
 
-Projeto desenvolvido como requisito para aprovação na primeira fase da Pós-graduação em Software Architecture na instituição de ensino Fiap.
+Projeto desenvolvido como requisito para aprovação na quarta fase da Pós-graduação em Software Architecture na instituição de ensino Fiap.
 
-Em síntese, este projeto foi desenvolvido para atender aos requisitos de um sistema de backend monolítico que gerencia pedidos e pagamentos, bem como a preparação e entrega de pedidos. O projeto utiliza a Arquitetura Hexagonal e segue os padrões de Domain-Driven Design (DDD), conforme apresentado nas aulas.
+Em síntese, este projeto foi desenvolvido para atender aos requisitos de um sistema de backend em microsserviço abstraindo a funcionalidade de Produtos do monolítico que gerencia pedidos e pagamentos, bem como a preparação e entrega de pedidos. O projeto utiliza a Arquitetura Hexagonal e segue os padrões de Domain-Driven Design (DDD), conforme apresentado nas aulas.
 
 
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: **Cadastro do Cliente:** APIs para criar, editar e remover clientes, além de identificar clientes via CPF;\
 :heavy_check_mark: **Gestão de Produtos:** APIs para criar, editar, remover produtos e buscar produtos por categoria;\
-:heavy_check_mark: **Fake Checkout:** API para enviar produtos escolhidos para a fila, simulando a finalização do pedido;\
-:heavy_check_mark: **Listagem de Pedidos:** API para listar todos os pedidos;\
-:heavy_check_mark: **Swagger:** Disponibilização do Swagger para consumo das APIs.
-
-
 
 ## :rocket: Tecnologias ##
 
@@ -81,8 +75,7 @@ A documentação do sistema foi desenvolvida seguindo os princípios de DDD com 
 
 #### Fluxos Documentados
 
-1. **Realização do Pedido e Pagamento**
-2. **Preparação e Entrega do Pedido**
+1. **Criação e Listagem de Produtos**
 
 Os diagramas foram desenhados seguindo os padrões explicados na aula e utilizando a linguagem ubíqua e, podem ser visualizados no nosso [MIRO](https://miro.com/app/board/uXjVKSMFSYU=/?share_link_id=1161200727).
 
@@ -126,11 +119,19 @@ A aplicação está configurada para utilizar MySQL conforme especificado no arq
 
 ## :memo: Equipe 43
 
-- [Felipe Carmo](https://github.com/carmof)
 - [Guilherme de Lima](https://github.com/GuilhermeLimaSoares)
 - [Jennyffer de Morais](https://github.com/jennyffermorais)
+- [Paulo Pupo](https://github.com/devpupo)
+- [Salomao-polega](https://github.com/salomao-polegar)
 - [Paulo Pupo](https://github.com/devpupo)
 
 &#xa0;
 
+## :checkered_flag: Cobertura de Testes Unitários ##
+
+![image](https://github.com/user-attachments/assets/06b5c329-b89a-4e6f-acbb-1a4af8d0fa51)
+
+
 <a href="#top">Voltar para o topo</a>
+
+
