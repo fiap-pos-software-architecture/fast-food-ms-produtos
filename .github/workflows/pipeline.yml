@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-      - develop
-      - feat/*
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   unit-test:
@@ -77,7 +77,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: jennyffernm/app-node-18:latest
+          images: guilhermelimasoares9/app-node-18-products
           tag-sha: true
 
       - name: QEMU
@@ -102,10 +102,10 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/app-node-18:latest
+          cache-from: type=registry,ref=guilhermelimasoares9/app-node-18-products
           cache-to: type=inline
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/app-node-18:latest
+            guilhermelimasoares9/app-node-18-products
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -117,8 +117,8 @@ jobs:
 
       - name: Deploy to EKS
         run: |
-          aws eks update-kubeconfig --name fast-food-ms-produtos
+          aws eks update-kubeconfig --name fast-food-project
           kubectl get deployments
 
-          kubectl apply -f kubernetes/Application
-          kubectl set image deployment/app-node-18 app-node-18=${{ secrets.DOCKERHUB_USERNAME }}/app-node-18:latest
+          kubectl apply -f kubernetes/Products
+          kubectl set image deployment/app-node-18-products app-node-18-products=guilhermelimasoares9/app-node-18-products
